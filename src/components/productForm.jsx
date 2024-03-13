@@ -10,7 +10,7 @@ export function ProductForm(props) {
     const [stock, setStock] = useState(stockQuantity ? stockQuantity : '')
     const {productsDispatch} = useContext(productContext)
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault(e)
         const data = {id: Number(new Date()),name, category: cat, price: Number(price), stockQuantity:stock}
         productsDispatch({type: 'ADD_PRO', payload: data})
         cancel()
